@@ -12,7 +12,7 @@ export default function ChatPresence() {
   
   
   useEffect(() => {
-    const channel = supabase.channel("chat-room");
+    const channel = supabase.channel("room1");
     channel
       .on("presence", { event: "sync" }, () => {
         console.log("Synced presence state: ", channel.presenceState());
