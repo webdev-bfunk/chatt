@@ -1,4 +1,3 @@
-import { User } from "@supabase/supabase-js";
 import { create } from "zustand";
 import { LIMIT_MESSAGE } from "../constants";
 //1hr 35mins https://www.youtube.com/watch?v=-xXASlyU0Ck&t=1083s

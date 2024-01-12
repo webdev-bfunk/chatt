@@ -128,7 +128,7 @@ export default function ListMessages() {
               onClick={scrollDown}
               className="px-3 mb-2 bg-green-500 opacity-80 border cursor-pointer hover:scale-110 transition-all duration-300 rounded-full justify-center flex items-center"
             >
-              <h1>New {notification} messages</h1>
+              <h1>{notification} New messages</h1>
             </div>
           ) : (
             <div

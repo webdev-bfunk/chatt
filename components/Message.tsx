@@ -17,7 +17,8 @@ export default function Message({ message }: { message: Imessage }) {
 	const user = useUser((state) => state.user);
 
 	const messageCreatedAt = new Date(message.created_at);
-	const formattedDate = messageCreatedAt.toDateString();
+	const options: Intl.DateTimeFormatOptions = { month: '2-digit', day: '2-digit', year: '2-digit' };
+	const formattedDate = messageCreatedAt.toLocaleDateString('en-US', options);
 	const formattedTime = messageCreatedAt.toLocaleTimeString();
 	const dateTimeString = `${formattedDate} - ${formattedTime}`;
 

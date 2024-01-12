@@ -28,8 +28,6 @@ export default async function Page() {
 					<ChatAbout />
 				)}
 					
-
-					
 				</div>
 			</div>
       				<InitUser user={data.session?.user} />
