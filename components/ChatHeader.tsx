@@ -5,6 +5,7 @@ import { supabaseBrowser } from "@/lib/supabase/browser";
 import { Provider, User } from "@supabase/supabase-js";
 import { useRouter } from "next/navigation";
 import ChatPresence from "./ChatPresence";
+import UserListModal from "./UserListModal";
 
 export default function ChatHeader({ user }: { user: User | undefined }) {
   const router = useRouter();
@@ -44,15 +45,16 @@ export default function ChatHeader({ user }: { user: User | undefined }) {
     <div className="h-20 bg-secondary rounded-lg">
       <div className="p-5 md:border-b flex items-center justify-between h-full">
         <div className="flex gap-2">
-          <h1 className="text-2xl font-bold ml-2">
+          <h1 className="text-3xl font-bold ml-2 flex flex-col">
             Daily Chat
-            <ChatPresence />
+            {/* <ChatPresence /> */}
+            <UserListModal />
           </h1>
         </div>
 		{user ? (
 			<div className="flex gap-2 items-center">
 			<img src={userImage} alt={userName} width={40} height={40} className="rounded-full ring-2" />
-			<div className="flex flex-col">
+			<div className="flex-col hidden md:flex">
 			  <h3 className="text-sm leading-none">Logged in as</h3>
 			  <h3 className="text-green-500"><b>{userName}</b></h3>
 			</div>

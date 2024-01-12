@@ -25,7 +25,7 @@ export default function ChatAbout() {
             Please login to send a message.
         </p>
 
-        <Button onClick={() => handleLoginWithProvider('github')}>Login with &nbsp;<BsGithub />&nbsp; <b>GitHub</b></Button>
+        <Button variant="outline" onClick={() => handleLoginWithProvider('github')}>Login with &nbsp;<BsGithub />&nbsp; <b>GitHub</b></Button>
         <Button onClick={() => handleLoginWithProvider('google')}>Login with &nbsp;<BsGoogle />&nbsp; <b>Google</b></Button>
     </div>
   )
