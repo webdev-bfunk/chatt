@@ -1,19 +1,16 @@
 "use client";
-import { CgUserList } from 'react-icons/cg'
-import React, { useEffect, useState } from "react";
 import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
+    AlertDialog,
+    AlertDialogCancel,
+    AlertDialogContent,
+    AlertDialogHeader,
+    AlertDialogTitle,
+    AlertDialogTrigger
 } from "@/components/ui/alert-dialog";
-import { supabaseBrowser } from "@/lib/supabase/browser";
 import { useUser } from "@/lib/store/user";
+import { supabaseBrowser } from "@/lib/supabase/browser";
+import { useEffect, useState } from "react";
+import { CgUserList } from 'react-icons/cg';
 
 export default function UserListModal() {
   const user = useUser((state) => state.user);
